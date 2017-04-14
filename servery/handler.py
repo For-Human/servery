@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 
 class Handler(object):
+    """Handler is a base class.
+    
+    :param server: web server instance
+    :param client_socket: client socket
+    :param client_address: client address
+    """
 
     routes = []
     

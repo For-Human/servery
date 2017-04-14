@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 
 class Server(object):
+    """Server is a web server class.
+    
+    :param host: host
+    :param port: port
+    :param handler: use to handle request
+    """
     
     def __init__(self, host, port, handler):
         import socket

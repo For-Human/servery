@@ -2,6 +2,7 @@
 from .statichandler import StaticHandler
 
 class CGIHandler(StaticHandler):
+    """CGIHandler is a subclass of StaticHandler."""
     
     routes = [
         ('GET', '/static/.*', 'static'),

@@ -2,6 +2,7 @@
 from .handler import Handler
 
 class StaticHandler(Handler):
+    """StaticHandler is a subclass of Handler."""
     
     routes = [
         ('GET', '/static/.*', 'static'),
