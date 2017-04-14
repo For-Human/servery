@@ -10,8 +10,6 @@ servery reconstructs the web server in python standard library.
 
 ## example
 
-## API
-
 ```python
 from servery import Server, Handler
 
