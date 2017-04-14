@@ -10,7 +10,6 @@ class CGIHandler(StaticHandler):
     ]
     
     def cgi(self, request_dict, query_dict, form_dict):
-        print 1
         import os
         import sys
         import subprocess
