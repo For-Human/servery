@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='servery',
-    version='0.0.2',
+    version='0.0.3',
     description='reconstruct web server in python standard library',
     author='gaoxinge',
     author_email='gaoxx5@gmail.com',
