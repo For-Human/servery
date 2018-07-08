@@ -6,7 +6,6 @@ servery reconstructs the web server in python standard library.
 - Handler reconstructs BaseHTTPServer.BaseHTTPRequestHandler
 - StaticHandler reconstructs SimpleHTTPServer.SimpleHTTPRequestHandler
 - CGIHandler reconstructs CGIHTTPServer.CGIHTTPRequestHandler
-- servery supports `pip install servery`
 
 ## example
 
@@ -33,8 +32,3 @@ httpd.serve_forever()
 - [test](https://github.com/For-Human/servery/tree/master/example/test)
 - [test_staitc](https://github.com/For-Human/servery/tree/master/example/test_static)
 - [test_cgi](https://github.com/For-Human/servery/tree/master/example/test_cgi)
-
-## TODO
-
-- support *nix
-- support python3
