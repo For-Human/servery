@@ -1,11 +1,11 @@
 ﻿# servery
 
-servery reconstructs the web server in python standard library.
+`servery` reconstructs the web server in python standard library, and big picture is showed below:
 
-- Server reconstructs BaseHTTPServer.HTTPServer
-- Handler reconstructs BaseHTTPServer.BaseHTTPRequestHandler
-- StaticHandler reconstructs SimpleHTTPServer.SimpleHTTPRequestHandler
-- CGIHandler reconstructs CGIHTTPServer.CGIHTTPRequestHandler
+- `Server`: `BaseHTTPServer.HTTPServer`
+- `Handler` `BaseHTTPServer.BaseHTTPRequestHandler`
+- `StaticHandler`: `SimpleHTTPServer.SimpleHTTPRequestHandler`
+- `CGIHandler`: `CGIHTTPServer.CGIHTTPRequestHandler`
 
 ## example
 
