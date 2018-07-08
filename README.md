@@ -7,7 +7,7 @@
 - `StaticHandler`: `SimpleHTTPServer.SimpleHTTPRequestHandler`
 - `CGIHandler`: `CGIHTTPServer.CGIHTTPRequestHandler`
 
-## example
+## hello world
 
 ```python
 from servery import Server, Handler
@@ -19,15 +19,17 @@ class MyHandler(Handler):
     ]
     
     def index(self, request_dict, query_dict, form_dict):
-        html = ''
+        html  = ''
         html += self.set_response(200)
         html += self.set_header('Content-Type', 'text/plain')
         html += self.set_body('Hello World!')
         return html
         
-httpd = Server('', 5000, MyHandler)
+httpd = Server('127.0.0.1', 8000, MyHandler)
 httpd.serve_forever()
 ```
+
+## example
 
 - [test](https://github.com/For-Human/servery/tree/master/example/test)
 - [test_staitc](https://github.com/For-Human/servery/tree/master/example/test_static)
