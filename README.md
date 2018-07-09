@@ -32,5 +32,5 @@ httpd.serve_forever()
 ## example
 
 - [ex_handler](https://github.com/For-Human/servery/tree/master/example/ex_handler)
-- [test_staitc](https://github.com/For-Human/servery/tree/master/example/test_static)
-- [test_cgi](https://github.com/For-Human/servery/tree/master/example/test_cgi)
+- [ex_staitc](https://github.com/For-Human/servery/tree/master/example/ex_static)
+- [ex_cgi](https://github.com/For-Human/servery/tree/master/example/ex_cgi)
