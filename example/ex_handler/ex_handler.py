@@ -30,5 +30,5 @@ class MyHandler(Handler):
         html += self.set_body('<p>My name is {name}. I am {age}.<p>'.format(name=name, age=age))
         return html
         
-httpd = Server('', 5000, MyHandler)
+httpd = Server('127.0.0.1', 8000, MyHandler)
 httpd.serve_forever()
