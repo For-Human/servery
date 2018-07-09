@@ -171,7 +171,7 @@ class Handler(object):
         )
         
     def notfound(self):
-        html  = ''
+        html = ''
         html += self.set_response(404)
         html += self.set_header('Content-Type', 'text/html')
         html += self.set_body('<h1>404 Not Found</h1>')

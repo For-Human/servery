@@ -14,7 +14,7 @@ class StaticHandler(Handler):
         path = os.path.join(os.getcwd(), *request_dict['REQUEST_PATH'].split('/'))
         suffix = os.path.splitext(path)[1]
         
-        html  = ''
+        html = ''
         html += self.set_response(200)
         html += self.set_header('Content-Type', mimetypes.types_map.get(suffix.lower(), ''))
         with open(path, 'rb') as f:

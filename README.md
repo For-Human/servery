@@ -19,7 +19,7 @@ class MyHandler(Handler):
     ]
     
     def index(self, request_dict, query_dict, form_dict):
-        html  = ''
+        html = ''
         html += self.set_response(200)
         html += self.set_header('Content-Type', 'text/plain')
         html += self.set_body('Hello World!')

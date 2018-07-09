@@ -50,7 +50,7 @@ class CGIHandler(StaticHandler):
         p.stderr.close()
         p.stdout.close()
         
-        html  = ''
+        html = ''
         html += self.set_response(200)
         html += self.set_header('Content-Type', 'text/html')
         html += self.set_body(stdout)
