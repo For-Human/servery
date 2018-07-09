@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import socket
 
 class Server(object):
     """Server is a web server class.
@@ -9,7 +10,6 @@ class Server(object):
     """
     
     def __init__(self, host, port, handler):
-        import socket
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.socket.bind((host, port))

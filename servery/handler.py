@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+import re
+import datetime
+from collections import defaultdict
 
 class Handler(object):
     """Handler is a base class.
@@ -17,9 +20,6 @@ class Handler(object):
         self.handle()
         
     def handle(self):
-        import re
-        import datetime
-        
         result = None
         print '[{time}] {host}:{port}'.format(
             time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
@@ -47,7 +47,6 @@ class Handler(object):
         self.client_socket.close()
     
     def parse_request(self, request):
-        from collections import defaultdict
         request_dict = {}
         query_dict   = defaultdict(list)
         form_dict    = defaultdict(list)
@@ -162,7 +161,7 @@ class Handler(object):
         
     def set_header(self, key, value):
         return '{key}: {value}\r\n'.format(
-            key  = key,
+            key   = key,
             value = value,
         )
         
@@ -172,7 +171,7 @@ class Handler(object):
         )
         
     def notfound(self):
-        html = ''
+        html  = ''
         html += self.set_response(404)
         html += self.set_header('Content-Type', 'text/html')
         html += self.set_body('<h1>404 Not Found</h1>')
