@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+import os
+import sys
+import subprocess
+import socket
+import copy
 from .statichandler import StaticHandler
 
 class CGIHandler(StaticHandler):
@@ -10,12 +15,6 @@ class CGIHandler(StaticHandler):
     ]
     
     def cgi(self, request_dict, query_dict, form_dict):
-        import os
-        import sys
-        import subprocess
-        import socket
-        import copy
-        
         tmp = ''
         for key, value in form_dict.iteritems():
             for _ in value:
@@ -51,7 +50,7 @@ class CGIHandler(StaticHandler):
         p.stderr.close()
         p.stdout.close()
         
-        html = ''
+        html  = ''
         html += self.set_response(200)
         html += self.set_header('Content-Type', 'text/html')
         html += self.set_body(stdout)
